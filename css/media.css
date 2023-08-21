@@ -920,6 +920,7 @@
 	}
 	.button-card {
 		margin: 0;
+		padding-top: 18px;
 		padding-bottom: 20px;
 	}
 	.card {
@@ -930,6 +931,9 @@
 	}
 	.section-porfolio {
 		padding-bottom: 44px;
+	}
+	.button-card .btn-main {
+		padding: 0 60px;
 	}
 }
 
