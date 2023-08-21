@@ -43,8 +43,8 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		touchThreshold: 1000,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
 		responsive: [
 		{
 			breakpoint: 992,
@@ -69,8 +69,29 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		touchThreshold: 1000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: '<div class="slick-prev slick-arrow"><i class="fal fa-chevron-left"></i><div/>',
-		nextArrow: '<div class="slick-next slick-arrow"><i class="fal fa-chevron-right"></i><div/>',
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+	});
+
+		$('.slider-porfolio').slick({
+		arrows: true,
+		dots: false,
+		infinite: true,
+		touchThreshold: 1000,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-chevron-left"></i><div/>',
+		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-chevron-right"></i><div/>',
+		responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 1,
+				arrows: false,
+				dots: true,
+			}
+		}
+		]
 	});
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
@@ -84,6 +105,13 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 	//<a class="fancybox"><img src="image.jpg" /></a>
 	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
 	$(".fancybox").fancybox();
+
+	$(".fancybox_main").fancybox({
+		 beforeShow : function(){
+      $(".fancybox-overlay").addClass("fancybox-overlay_hidden");
+      
+    }
+	});
 
 
 	//Кнопка "Наверх"
